@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text"/>
+    <id>uuid:b467e5f1-4a69-4ad8-a2a6-0d8bf3932e0e;id=1</id>
+    <updated>2013-12-05T08:45:00-07:00</updated>
+    <entry>
+        <id>b467e5f1-4a69-4ad8-a2a6-0d8bf3932e0e</id>
+        <title type="text">Document AutoSave</title>
+        <summary type="text">Save modified documents when Visual Studio loses focus.</summary>
+        <published>2013-11-10T10:00:00-07:00</published>
+        <updated>2016-10-14T13:45:00-07:00</updated>
+        <author>
+            <name>BlackIce Software</name>
+        </author>
+        <content type="application/octet-stream" src="CBExtensionPkg.vsix"/>
+        <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
+            <Id>b467e5f1-4a69-4ad8-a2a6-0d8bf3932e0e</Id>
+            <Version>1.11.4.0</Version>
+            <References/>
+            <Rating xsi:nil="true"/>
+            <RatingCount xsi:nil="true"/>
+            <DownloadCount xsi:nil="true"/>
+        </Vsix>
+    </entry>
+  <!-- test -->
+</feed>

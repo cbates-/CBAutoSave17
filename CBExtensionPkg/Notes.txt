@@ -1,0 +1,15 @@
+﻿
+
+GENERAL NOTES
+- To add a menu item, look in cbextensionpkg.vsct.
+- - A button needs to be added
+- - A Symbol needs to be added; look for the existing command IDs.
+- - In Initialize(), add the menu item.
+
+
+Meaningless change to spark an appveyor build.
+Test Slack integ.
+
+Build events
+copy $(ProjectDir)atom.xml c:\killme\cbates.net
+copy $(TargetDir)CBExtensionPkg.vsix c:\killme\cbates.net
