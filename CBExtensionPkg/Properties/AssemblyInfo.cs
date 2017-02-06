@@ -11,8 +11,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("AutoSave modified documents")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("BlackIce Software")]
-[assembly: AssemblyProduct("CBAutoSave")]
-[assembly: AssemblyCopyright("© 2016 Charles Bates, BlackIce Software")]
+[assembly: AssemblyProduct("CBAutoSave17")]
+[assembly: AssemblyCopyright("© 2017 Charles Bates, BlackIce Software")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,5 +34,5 @@ using System.Runtime.InteropServices;
 //  According to http://blogs.msdn.com/b/visualstudio/archive/2010/06/09/vsix-best-practices.aspx,
 // versioning should be done in the .vsixmanifest file.
 
-[assembly: AssemblyVersion("1.11.4.*")]
+[assembly: AssemblyVersion("1.0.0.*")]
 // [assembly: AssemblyFileVersion("1.0.0.0")]

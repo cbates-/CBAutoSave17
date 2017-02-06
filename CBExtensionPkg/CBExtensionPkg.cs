@@ -204,24 +204,20 @@ namespace BlackIceSoftware.CBExtensionPkg
                 var lostFocusCmd = cbAddInKey.GetValue(LostFocusCmdSubKeyName);
                 var lostFocusCmdArgs = cbAddInKey.GetValue(LostFocusCmdArgsSubKeyName);
 
-                bool autosaveEnabled;
-                bool autosaveProjectEnabled;
-                bool autosaveSolutionEnabled;
-                bool autosaveSingleDocEnabled;
 
-                if (!bool.TryParse((string)saveFiles, out autosaveEnabled))
+                if (!bool.TryParse((string)saveFiles, out bool autosaveEnabled))
                 {
                     autosaveEnabled = true;
                 }
-                if (!bool.TryParse((string)saveProjs, out autosaveProjectEnabled))
+                if (!bool.TryParse((string)saveProjs, out bool autosaveProjectEnabled))
                 {
                     autosaveProjectEnabled = false;
                 }
-                if (!bool.TryParse((string)saveSolutions, out autosaveSolutionEnabled))
+                if (!bool.TryParse((string)saveSolutions, out bool autosaveSolutionEnabled))
                 {
                     autosaveSolutionEnabled = false;
                 }
-                if (!bool.TryParse((string)saveSingleDoc, out autosaveSingleDocEnabled))
+                if (!bool.TryParse((string)saveSingleDoc, out bool autosaveSingleDocEnabled))
                 {
                     autosaveSingleDocEnabled = false;
                 }
@@ -565,7 +561,6 @@ namespace BlackIceSoftware.CBExtensionPkg
             }
 
             Guid clsid = Guid.Empty;
-            int result;
             ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
                 0,
                 ref clsid,
@@ -577,7 +572,7 @@ namespace BlackIceSoftware.CBExtensionPkg
                 OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
                 OLEMSGICON.OLEMSGICON_INFO,
                 0, // false
-                out result));
+                out int result));
         }
 
         private void OutputMessage(string msg)
