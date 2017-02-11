@@ -19,10 +19,13 @@ namespace BlackIceSoftware.CBExtensionPkg
 
         private bool _autoSaveProjects;
         private bool _autoSaveSolution;
+
+#if USE_LOST_FOCUS_CMDS
         private string _lostFocusCommand;
         private string _lostFocusCommandArgs;
         private string _lostDocFocusCommand;
         private string _lostDocFocusCommandArgs;
+#endif
 
         [Category("General")]
         [DisplayName("AutoSaveDocuments")]
@@ -60,6 +63,7 @@ namespace BlackIceSoftware.CBExtensionPkg
             set { _autoSaveSolution = value; }
         }
 
+#if USE_LOST_FOCUS_CMDS
         [Category("Custom")]
         [DisplayName("LostFocusCommand")]
         [Description("Command to execute when VisStudio loses focus - USE WITH CAUTION")]
@@ -95,6 +99,7 @@ namespace BlackIceSoftware.CBExtensionPkg
             get { return _lostDocFocusCommandArgs; }
             set { _lostDocFocusCommandArgs = value; }
         }
+#endif
 
     }
 }

@@ -104,19 +104,25 @@ namespace BlackIceSoftware.CBExtensionPkg
             bool autosaveSingleDocEnabled = opts.AutoSaveSingleDocument;
             bool autosaveProjectEnabled = opts.AutoSaveProjects;
             bool autosaveSolutionEnabled = opts.AutoSaveSolution;
+
+#if USE_LOST_FOCUS_CMDS
             string lostFocusCommand = opts.LostFocusCommand;
             string lostFocusCommandArgs = opts.LostFocusCommandArgs;
             string lostDocFocusCommand = opts.LostDocFocusCommand;
             string lostDocFocusCommandArgs = opts.LostDocFocusCommandArgs;
+#endif
 
             saveRegistryKeyValue(SaveSingleDocumentSubKeyName, autosaveSingleDocEnabled.ToString());
             saveRegistryKeyValue(SaveFilesSubKeyName, autosaveEnabled.ToString());
             saveRegistryKeyValue(SaveProjectsSubKeyName, autosaveProjectEnabled.ToString());
             saveRegistryKeyValue(SaveSolutionsSubKeyName, autosaveSolutionEnabled.ToString());
+
+#if USE_LOST_FOCUS_CMDS
             saveRegistryKeyValue(LostFocusCmdSubKeyName, lostFocusCommand);
             saveRegistryKeyValue(LostFocusCmdArgsSubKeyName, lostFocusCommandArgs);
             saveRegistryKeyValue(LostDocFocusCmdSubKeyName, lostDocFocusCommand);
             saveRegistryKeyValue(LostDocFocusCmdArgsSubKeyName, lostDocFocusCommandArgs);
+#endif
             return base.QueryClose(out canClose);
         }
 
@@ -240,8 +246,10 @@ namespace BlackIceSoftware.CBExtensionPkg
                 opts.AutoSaveSingleDocument = autosaveSingleDocEnabled;
                 opts.AutoSaveProjects = autosaveProjectEnabled;
                 opts.AutoSaveSolution = autosaveSolutionEnabled;
+#if USE_LOST_FOCUS_CMDS
                 opts.LostFocusCommand = lostFocusCmdString;
                 opts.LostFocusCommandArgs = lostFocusCmdArgsString;
+#endif
 
                 cbAddInKey.Close();
                 userKey.Close();
@@ -286,6 +294,8 @@ namespace BlackIceSoftware.CBExtensionPkg
                     }
                 }
             }
+
+#if USE_LOST_FOCUS_CMDS
             if (GotFocus != null && GotFocus.Kind.Equals("Document"))
             {
                 if (!_dte.ActiveDocument.Language.Equals("XAML"))
@@ -296,9 +306,10 @@ namespace BlackIceSoftware.CBExtensionPkg
                     }
                 }
             }
+#endif
         }
 
-        #endregion
+#endregion
 
         private bool SafeExecuteCommand(ITextView contextTextView, string command, string args = "")
         {
@@ -345,7 +356,9 @@ namespace BlackIceSoftware.CBExtensionPkg
                 try
                 {
                     _dte.ExecuteCommand("File.SaveAll");
+#if USE_LOST_FOCUS_CMDS
                     ExecuteLostFocusCmd();
+#endif
                     return 1;
                 }
                 catch (Exception)
@@ -452,11 +465,15 @@ namespace BlackIceSoftware.CBExtensionPkg
                 }
             }
 
+#if USE_LOST_FOCUS_CMDS
             ExecuteLostFocusCmd();
+#endif
 
             return 1;
         }
 
+
+#if USE_LOST_FOCUS_CMDS
         private void ExecuteLostFocusCmd()
         {
             var opts = GetDialogPage(typeof(AutoSaveOptions)) as AutoSaveOptions;
@@ -509,6 +526,7 @@ namespace BlackIceSoftware.CBExtensionPkg
                 }
             }
         }
+#endif
 
         public Project GetCurrentProject()
         {
