@@ -1,4 +1,5 @@
-﻿//
+﻿#define USE_LOST_FOCUS_CMDS
+//
 // Project:  CBExtensionPkg
 //
 using System;
