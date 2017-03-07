@@ -1,4 +1,4 @@
-﻿#define USE_LOST_FOCUS_CMDS
+﻿//
 // Project:  CBExtensionPkg
 //
 
@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 // ReSharper disable LocalizableElement
 // ReSharper disable ConvertToAutoProperty
+//   
 
 namespace BlackIceSoftware.CBExtensionPkg
 {

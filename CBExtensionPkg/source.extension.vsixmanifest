@@ -2,8 +2,8 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="b467e5f1-4a69-4ad8-a2a6-0d8bf3932e0e" Version="1.0.0" Language="en-US" Publisher="BlackIce Software" />
-    <DisplayName>CBAutoSave15</DisplayName>
-    <Description xml:space="preserve">Save modified documents, projects, and solution when Visual Studio loses focus.</Description>
+    <DisplayName>CBAutoSave15Ex</DisplayName>
+    <Description xml:space="preserve">Save modified documents, projects, and solution when Visual Studio loses focus.  Has ability to call other commands on lost focus (dangerous!).</Description>
     <MoreInfo>http://cbates.net/utilities/</MoreInfo>
     <License>Resources\LICENSE</License>
     <Icon>Resources\SaveAllIcon.png</Icon>
