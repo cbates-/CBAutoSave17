@@ -18,8 +18,8 @@ x64/
 [Oo]bj/
 
 # VSCode
-# .vscode*
-# .vscode/
+.vscode*
+.vscode/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
