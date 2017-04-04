@@ -12,7 +12,7 @@
         <author>
             <name>BlackIce Software</name>
         </author>
-        <content type="application/octet-stream" src="CBExtensionPkg.vsix"/>
+        <content type="application/octet-stream" src="CBAutoSave15.vsix"/>
         <Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xmlns="http://schemas.microsoft.com/developer/vsx-syndication-schema/2010">
             <Id>D33F1957-BDD6-4D9D-AC43-A604B471BB32</Id>
