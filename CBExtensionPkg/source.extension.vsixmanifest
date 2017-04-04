@@ -4,7 +4,7 @@
     <Identity Id="D33F1957-BDD6-4D9D-AC43-A604B471BB32" Version="1.0.0" Language="en-US" Publisher="BlackIce Software" />
     <DisplayName>CBAutoSave15</DisplayName>
     <Description xml:space="preserve">Save modified documents, projects, and solution when Visual Studio 2017 loses focus.</Description>
-    <MoreInfo>http://cbates.net/utilities/</MoreInfo>
+    <MoreInfo>http://cbates.net/cbautosave/</MoreInfo>
     <License>Resources\LICENSE</License>
     <Icon>Resources\SaveAllIcon.png</Icon>
     <PreviewImage>Resources\SaveAllPreview.png</PreviewImage>

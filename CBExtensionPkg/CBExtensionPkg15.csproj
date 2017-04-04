@@ -218,7 +218,8 @@
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
     <PostBuildEvent>copy $(TargetDir)CBAutoSave15.vsix c:\killme\cbates.net
-copy $(ProjectDir)atom.xml c:\killme\cbates.net</PostBuildEvent>
+    copy $(ProjectDir)atom.xml c:\killme\cbates.net
+</PostBuildEvent>
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
