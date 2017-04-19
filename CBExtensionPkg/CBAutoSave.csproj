@@ -205,8 +205,8 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup>
-    <PostBuildEvent>copy  $(ProjectDir)atom.xml c:\killme\cbates.net
-copy $(TargetDir)CBExtensionPkg.vsix c:\killme\cbates.net</PostBuildEvent>
+    <PostBuildEvent>copy  $(ProjectDir)atom.xml c:\killme\cbates.net\AutoSaveEx
+copy $(TargetDir)CBExtensionPkg.vsix c:\killme\cbates.net\AutoSaveEx</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 // ReSharper disable LocalizableElement
 // ReSharper disable ConvertToAutoProperty
-//   
+//
 
 namespace BlackIceSoftware.CBExtensionPkg
 {
