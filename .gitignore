@@ -2,7 +2,7 @@ packages
 
 # User files
 *.suo
-# *.user # Let's save this, since it has debug settings for the project.
+*.user
 *.sln.docstates
 *.*~
 .vs/
