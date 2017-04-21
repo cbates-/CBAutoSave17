@@ -2,7 +2,7 @@ packages
 
 # User files
 *.suo
-# *.user # Let's save this, since it has debug settings for the project.
+*.user # Let's save this, since it has debug settings for the project.
 *.sln.docstates
 *.*~
 .vs/
@@ -36,3 +36,4 @@ _NCrunch_WebCompiler
 UpgradeLog*.htm
 test/
 
+*.user
